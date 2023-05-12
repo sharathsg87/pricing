@@ -4,6 +4,28 @@ html,body{
     font-size: 14px;
     overflow-x: hidden;
 }
+.header{
+    box-shadow: 0px 0px 8px lightgrey;
+}
+.header h3{
+    color: #212529;
+}
+.header_right ul{
+    list-style-type: none;
+    float: right;
+}
+.header_right li{
+    display: inline-block;
+    padding-right: 18px;
+}
+.header_right a{
+    color: #212529;
+    font-weight: 600;
+    font-size: 16px;
+}
+.header_right a:hover{
+    text-decoration: none;
+}
 .pricing_head{
     padding: 4% 0;
     text-align: center;
