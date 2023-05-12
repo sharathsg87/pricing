@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <!------------------------------JS-------------------------------------->
+	<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+</head>
+<body>
+    <section class="pricing">
+        <div class="container">
+            <div class="pricing_head">
+                <h2 data-toggle="modal" data-target="#myModal">Pricing</h2>
+                <p>Quickly build an effective pricing table for your potential customers with this Bootstrap example. It's built with default Bootstrap components and utilities with little customization.</p>
+                <!-- The Modal -->
+                <div class="modal" id="myModal">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+                
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <input type="text" placeholder="Name" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" placeholder="Email" class="form-control">
+                            </div>
+                            <textarea class="form-control" placeholder="Comments" rows="4"></textarea>
+                        </div>
+                
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary">Submit</button>
+                        </div>
+                
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="price_card">
+                        <div class="card_header">
+                            <p>Free</p>
+                        </div>
+                        <div class="card_body">
+                            <h3>$0/<span>mo</span></h3>
+                            <ul type="none">
+                                <li>10 users included</li>
+                                <li>2 GB of storage</li>
+                                <li>Email support</li>
+                                <li>Help center access</li>
+                            </ul>
+                            <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#myModal1">Get Started</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="price_card" id="plan2">
+                        <div class="card_header">
+                            <p>Pro</p>
+                        </div>
+                        <div class="card_body">
+                            <h3>$15/<span>mo</span></h3>
+                            <ul type="none">
+                                <li>10 users included</li>
+                                <li>2 GB of storage</li>
+                                <li>Email support</li>
+                                <li>Help center access</li>
+                            </ul>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal1">Get Started</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="price_card" id="plan3">
+                        <div class="card_header">
+                            <p>Enterprise</p>
+                        </div>
+                        <div class="card_body">
+                            <h3>$29/<span>mo</span></h3>
+                            <ul type="none">
+                                <li>10 users included</li>
+                                <li>2 GB of storage</li>
+                                <li>Email support</li>
+                                <li>Help center access</li>
+                            </ul>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal1">Get Started</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!----------------->
+             <!-- The Modal -->
+             <div class="modal" id="myModal1">
+                <div class="modal-dialog">
+                <div class="modal-content">
+            
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <input type="text" placeholder="Name" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Email" class="form-control">
+                        </div>
+                        <textarea class="form-control" placeholder="Comments" rows="4"></textarea>
+                    </div>
+            
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary">Submit</button>
+                    </div>
+            
+                </div>
+                </div>
+            </div>
+               <div class="slider">
+                    <span id="valueBox"></span>
+                    <input type="range"  min="5" max="40" step="1" onchange="showValue(this.value)"> 
+               </div>
+        </div>
+    </section>
+
+    
+
+</body>
+</html>
+
+<script>
+    function showValue(newVal){
+        
+        document.getElementById("valueBox").innerHTML=newVal;
+        document.querySelector('.price_card').style.backgroundColor = '#fff';
+        document.querySelector('#plan2').style.backgroundColor='#fff';
+        document.querySelector('#plan3').style.backgroundColor='#fff';
+
+
+        if(newVal > 0 && newVal < 10 ){
+            document.querySelector('.price_card').style.backgroundColor = 'lightgrey';
+        }
+        else if(newVal > 10 && newVal <20){
+            document.querySelector('#plan2').style.backgroundColor='darkgrey';
+        }
+        else if(newVal > 20){
+            document.querySelector('#plan3').style.backgroundColor='lightgrey';
+        }
+    }
+</script>
